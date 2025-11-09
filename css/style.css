@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Typing Animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 15ch; }
+}
+
+@keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: #034f84; }
+}
+
+@keyframes play1 {
+    from { background-position: 0 0; }
+    to { background-position: 0 -900px;} /* scrolls down sprite sheet */
+}
+
+
+#loading-animation {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  z-index: 99999;
+  transition: opacity 0.4s ease;
+}
+
+.loading-bird {
+    width: 300px;
+    height: 300px;
+    background: url('/images/bird-sprite.png') no-repeat;
+    animation: play1 1s steps(3) infinite;
+    display: inline-block;
+    scale: 0.3;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+/* Universal tags */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Source+Code+Pro', monospace;
+    font-size: medium;
+    color: #302e2e;
+    line-height: 1.6;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #034f84;
+}
+
+h1, h2 {
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+#typed-name {
+  display: inline-block;
+  font-size: 60px;
+  font-family: monospace;
+  font-weight: 800;
+  border-right: 6px solid #034f84; 
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+}
+
+/* Class Selectors */
+
+
+.blink {
+    animation: blink 0.8s step-end infinite;
+}
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    height: 70px;
+    box-shadow: 0 2px 5px 0 #9e9b9b;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar nav ul li a {
+  color: #2b2c2d;         
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.1s ease; 
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar nav ul li a:hover {
+    color: #034f84;
+    transform: scale(1.1);
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+}
+
+/* Home Page */
+.home {
+    min-height: 100vh;
+    position: relative;
+    padding: 60px 40px;
+    scroll-margin-top: 80px;
+}
+
+.home h1 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+
+.home h2 {
+    font-size: 60px;
+    font-family: monospace;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .1em solid #034f84;
+    width: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    place-items: center;
+    padding: 40px 40px;
+}
+
+.intro-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: start;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+img {
+  width: 100px;
+  justify-self: center;
+  border-radius: 5px;
+}
+
+/* About Page */
+#home, #about {
+     scroll-margin-top: 80px;
+}
+
+.about {
+    height: 100vh; /* vh = vertical height */
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.about-img img {
+    width: 100%
+}
+
+.about h1 {
+    font-family: monospace;
+    font-weight: 800;
+}
+.about-text {
+    font-size: 15px;
+    color: rgb(46, 47, 49);
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2ecf4;
+    padding: 100px 200px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Links Page */

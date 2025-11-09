@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>manal's portfolio</title>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-animation">
+        <div class="loading-bird"></div>
+    </div>
+    <!--Navigation Bar-->
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo">☆</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#links">links</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Home Section-->
+    <section class="home">
+        <div class="intro-container" id="home">
+                <h1> hello! i'm </h1>
+                <h2 id="typed-name"> manal chaudhry
+                <!--<span id="typed-role"></span> -->
+                </h2>
+        <div class="content-grid">
+            <div class="home-info">
+                <p> 
+                i like building things, 
+                tinkering with embedded systems, 
+                and learning new stuff :]
+                </p>
+            </div>
+                <img src="/images/6b95a2199f00b5e8f78fd964ce0b4109.jpg" alt="Logo image">
+            </div>
+
+            <a href ="#" class="btn btn-outline">check out my portfolio!</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+     <section class="about">
+        <div class="about-grid" id="about">
+            <div class="about-img">
+                <img src="/images/about-img.png">
+            </div>
+            <div class="about-text">
+                <h1> about!</h1>
+                <p>
+                    I'm currently an undergraduate student studying Mechanical Engineering at the University of Calgary and my anticipated graduation is in April 2028.
+                </p>
+            
+                <p>
+                    I enjoy analyzing complex systems and getting to work on problems that make you scratch your head and require some out-of-the-box thinking. 
+                    I also really like math so anything with lots of that appeals to me! In my free time, I'm an avid reader (fantasy and thriller fans rise), cyclist,
+                    and hobby-collector and am always looking for ways to integrate my interests with my passion for engineering.
+                </p>
+
+                <p>
+                    Throughout my journey, I've experimented with various fields of mechanical engineering through research, extracurricular work, and personal projects
+                    including mechatronics, CFD, and even plain old coding (like you see on here!). While I still love learning new things and enjoy being a Jack of all trades,
+                    currently my career aspirations lie in integrating mechanical systems with embedded ones and getting to work on all parts of the process, including circuitry, coding, and product optimization.
+                </p>
+            </div>
+        </div>
+     </section>
+
+     <!-- Links Section -->
+      <section class="links">
+        <div class="container">
+
+        </div>
+      </section>
+
+    <!-- Typing Animation-->
+    <script src="/typing.js"></script>
+<!-- Loading Bird Animation-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("loading-animation").style.opacity = "0";
+    setTimeout(() => {
+      document.getElementById("loading-animation").style.display = "none";
+    }, 400);
+  }, 2500); 
+});
+</script>
+
+</body>
+</html>
